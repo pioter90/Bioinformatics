@@ -24,7 +24,7 @@ public class ClusterParser {
             StringBuffer stringBuffer = new StringBuffer();
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                line.replaceAll("\\s+","");
+                line = line.replaceAll("\\s+","");
                 ArrayList<Leaf> leaves = new ArrayList<Leaf>();
                 String[] leavesNames = line.split(",");
                 for(int i=0;i<leavesNames.length; i++){
