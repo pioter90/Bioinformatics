@@ -28,15 +28,10 @@ public class ClusterParser {
                 String[] leavesNames = line.split(",");
                 for(int i=0;i<leavesNames.length; i++){
                    Leaf leaf = new Leaf(leavesNames[i]);
-
-
-
-                    System.out.println(leavesNames[i]);
-
+                    leaves.add(leaf);
                 }
-
-
-
+                Edge edge = new Edge(leaves);
+                edges.add(edge);
             }
             fileReader.close();
 
