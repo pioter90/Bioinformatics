@@ -24,6 +24,7 @@ public class ClusterParser {
             StringBuffer stringBuffer = new StringBuffer();
             String line;
             while ((line = bufferedReader.readLine()) != null) {
+                line.replaceAll("\\s+","");
                 ArrayList<Leaf> leaves = new ArrayList<Leaf>();
                 String[] leavesNames = line.split(",");
                 for(int i=0;i<leavesNames.length; i++){
@@ -36,7 +37,7 @@ public class ClusterParser {
             fileReader.close();
 
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
