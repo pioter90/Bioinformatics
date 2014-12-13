@@ -7,6 +7,10 @@ public class Leaf {
 		this.id=id;
 	}
 	
+	public String getId(){
+		return this.id;
+	}
+	
 	@Override
 	public boolean equals(Object o){
 		if(o.getClass().equals(this.getClass())){

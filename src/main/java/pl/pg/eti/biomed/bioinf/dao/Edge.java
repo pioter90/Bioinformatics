@@ -30,6 +30,10 @@ public class Edge {
 		
 	}
 	
+	public ArrayList<Leaf> getLeaves(){
+		return this.leaves;
+	}
+	
 	private boolean isLeafIncluded(Leaf searchedLeaf){
 		for(Leaf leaf:leaves){
 			if(searchedLeaf.equals(leaf))
@@ -45,5 +49,6 @@ public class Edge {
 	private int getNumberOfLeaves(){
 		return this.leaves.size();
 	}
+	
 	
 }
