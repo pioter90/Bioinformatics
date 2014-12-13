@@ -9,7 +9,8 @@ public class Leaf {
 	
 	@Override
 	public boolean equals(Object o){
-		if(o.getClass().toString().equals("Leaf")){
+		System.out.println(o.getClass().toString());
+		if(o.getClass().equals(this.getClass())){
 			Leaf l = (Leaf)o;
 			if(this.id.equals(l.id)){
 				return true;
