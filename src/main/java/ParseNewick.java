@@ -12,14 +12,14 @@ import java.util.*;
 import org.jgrapht.graph.*;
 
 import pl.pg.eti.biomed.bioinf.dao.Leaf;
+    import pl.pg.eti.biomed.bioinf.dao.Tree;
+    import pl.pg.eti.biomed.bioinf.parsers.ClusterParser;
 
-    public class ParseNewick {
+public class ParseNewick {
 
         public static void main(String [] args) throws Exception {
 
-            Leaf l = new Leaf("aa");
-            
-            System.out.println(l.equals("test"));
+            Tree tree = ClusterParser.parseFile("cos.xml");
             
         } // end of main
 
