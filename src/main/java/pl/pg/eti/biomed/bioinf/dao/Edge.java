@@ -42,6 +42,22 @@ public class Edge {
 		return stringLeaves;
 	}
 	
+	@Override
+	public boolean equals(Object o){
+		if(o.getClass().equals(this.getClass())){
+			Edge edge = (Edge)o;
+			if(this.getNumberOfLeaves()!=edge.getNumberOfLeaves())
+				return false;
+			for(Leaf leaf:this.leaves){
+				if(!edge.doesContainLeaf(leaf))
+					return false;
+			}
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
 	private boolean isLeafIncluded(Leaf searchedLeaf){
 		for(Leaf leaf:leaves){
 			if(searchedLeaf.equals(leaf))
@@ -56,6 +72,10 @@ public class Edge {
 	
 	private int getNumberOfLeaves(){
 		return this.leaves.size();
+	}
+	
+	private boolean doesContainLeaf(Leaf leaf){
+		return this.leaves.contains(leaf);
 	}
 	
 	
