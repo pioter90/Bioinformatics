@@ -26,9 +26,19 @@
             <artifactId>jgrapht</artifactId>
             <version>0.7.3</version>
         </dependency>
-
-
-
-    </dependencies>
+        
+    <dependency>
+      <groupId>org.biojava</groupId>
+      <artifactId>biojava3-core</artifactId>
+      <version>3.1.0</version>
+	</dependency>
+  </dependencies>
+    <repositories>
+		<repository>
+			<id>biojava-maven-repo</id>
+			<name>BioJava repository</name>
+			<url>http://www.biojava.org/download/maven/</url>			
+		</repository>
+	</repositories>
     
 </project>
