@@ -14,7 +14,7 @@ import java.nio.file.Files;
 public class ClusterParser {
 
 
-    public static Tree parseFile(String filePath) throws IOException {
+    public static Tree parseFile(String filePath) {
         ArrayList<Edge> edges = new ArrayList<Edge>();
 
         try {
