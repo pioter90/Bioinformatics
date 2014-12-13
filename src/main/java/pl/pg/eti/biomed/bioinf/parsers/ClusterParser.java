@@ -1,5 +1,6 @@
 package pl.pg.eti.biomed.bioinf.parsers;
 import pl.pg.eti.biomed.bioinf.dao.Edge;
+import pl.pg.eti.biomed.bioinf.dao.Leaf;
 import pl.pg.eti.biomed.bioinf.dao.Tree;
 
 import java.io.*;
@@ -23,18 +24,31 @@ public class ClusterParser {
             StringBuffer stringBuffer = new StringBuffer();
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                stringBuffer.append(line);
-                stringBuffer.append("\n");
+                ArrayList<Leaf> leaves = new ArrayList<Leaf>();
+                String[] leavesNames = line.split(",");
+                for(int i=0;i<leavesNames.length; i++){
+                   Leaf leaf = new Leaf(leavesNames[i]);
+
+
+
+                    System.out.println(leavesNames[i]);
+
+                }
+
+
+
             }
             fileReader.close();
-            System.out.println("Contents of file:");
-            System.out.println(stringBuffer.toString());
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
         Tree tree = new Tree(edges);
         return tree;
     }
+
+
 
 
 }
