@@ -34,6 +34,14 @@ public class Edge {
 		return this.leaves;
 	}
 	
+	public String getLeavesAsString(){
+		String stringLeaves="";
+		for(Leaf leaf:leaves){
+			stringLeaves+=leaf.getId();
+		}
+		return stringLeaves;
+	}
+	
 	private boolean isLeafIncluded(Leaf searchedLeaf){
 		for(Leaf leaf:leaves){
 			if(searchedLeaf.equals(leaf))
@@ -49,6 +57,7 @@ public class Edge {
 	private int getNumberOfLeaves(){
 		return this.leaves.size();
 	}
+	
 	
 	
 }
