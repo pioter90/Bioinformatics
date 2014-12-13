@@ -38,6 +38,7 @@ public class ClusterParser {
 
         } catch (IOException e) {
             e.printStackTrace();
+            return null;
         }
         Tree tree = new Tree(edges);
         return tree;
