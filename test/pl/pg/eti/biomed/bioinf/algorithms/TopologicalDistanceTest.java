@@ -12,18 +12,19 @@ public class TopologicalDistanceTest {
     public void trees_RF_4(){
         Tree tree = ClusterParser.getOneTreeFromFile("Tests/TopologicalDistanceTests/Tree_1_RF_4.txt");
         Tree tree2 = ClusterParser.getOneTreeFromFile("Tests/TopologicalDistanceTests/Tree_2_RF_4.txt");
-        Assert.assertTrue(TopologicDistance.calculateTopologicDistanceBetweenTrees(tree, tree2) == 4);
+        Assert.assertEquals(4, TopologicDistance.calculateTopologicDistanceBetweenTrees(tree, tree2));
     }
     @Test
     public void trees_RF_0(){
         Tree tree = ClusterParser.getOneTreeFromFile("Tests/TopologicalDistanceTests/Tree_1_RF_0.txt");
         Tree tree2 = ClusterParser.getOneTreeFromFile("Tests/TopologicalDistanceTests/Tree_2_RF_0.txt");
-        Assert.assertTrue(TopologicDistance.calculateTopologicDistanceBetweenTrees(tree, tree2) == 0);
+        Assert.assertEquals(0, TopologicDistance.calculateTopologicDistanceBetweenTrees(tree, tree2));
     }
     @Test
     public void trees_RF_null(){
         Tree tree = ClusterParser.getOneTreeFromFile("Tests/TopologicalDistanceTests/Tree_1_RF_null.txt");
         Tree tree2 = ClusterParser.getOneTreeFromFile("Tests/TopologicalDistanceTests/Tree_2_RF_null.txt");
+        Assert.assertEquals(-1, TopologicDistance.calculateTopologicDistanceBetweenTrees(tree, tree2));
     }
 
 
