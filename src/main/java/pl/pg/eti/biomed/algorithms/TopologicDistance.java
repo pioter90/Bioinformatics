@@ -13,11 +13,19 @@ public class TopologicDistance {
 	public static int calculateTopologicDistanceBetweenTrees(Tree tree1, Tree tree2){
 		if(!tree1.getEdgeAt(0).equals(tree2.getEdgeAt(0)))
 			return -1;
-		for(Edge edge:tree1.getEdges()){
-			//TO DO!
+		int distance=0;
+		distance += getNumberOfNotExistingEdges(tree1, tree2);
+		distance += getNumberOfNotExistingEdges(tree2, tree1);
+		return distance;
+	}
+	
+	private static int getNumberOfNotExistingEdges(Tree tree, Tree refTree){
+		int number=0;
+		for(Edge edge:tree.getEdges()){
+			if(!refTree.doesTreeContainsEdge(edge))
+				number++;
 		}
-		
-		return 0;
+		return number;
 	}
 	
 	

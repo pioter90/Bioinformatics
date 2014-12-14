@@ -39,6 +39,14 @@ public class Tree {
 		}
 	}
 	
+	public boolean doesTreeContainsEdge(Edge edge){
+		for(Edge locEdge:this.edges){
+			if(edge.equals(locEdge))
+				return true;
+		}
+		return false;
+	}
+	
 	private boolean isTheTreeBuildable(){
 		for(Edge edge1:edges){
 			for(Edge edge2:edges){
@@ -49,6 +57,7 @@ public class Tree {
 		}
 		return true;
 	}
+	
 }
 
 class EdgeComparator implements Comparator<Edge>{
