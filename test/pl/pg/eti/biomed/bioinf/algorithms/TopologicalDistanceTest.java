@@ -1,7 +1,5 @@
 package pl.pg.eti.biomed.bioinf.algorithms;
 
-
-
 import org.junit.*;
 
 import pl.pg.eti.biomed.bioinf.algorithms.TopologicDistance;
