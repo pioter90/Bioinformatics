@@ -29,6 +29,8 @@ public class ClusterParser {
     }
     
     private static Edge getEdgeFromLine(String line){
+    	if(line.length()==0)
+    		return null;
     	ArrayList<Leaf> leaves = new ArrayList<Leaf>();
         String[] leavesNames = line.split(",");
         for(int i=0;i<leavesNames.length; i++){
@@ -42,7 +44,9 @@ public class ClusterParser {
     	String[] edgesData=treeData.split("\n");
     	ArrayList<Edge> edges = new ArrayList<Edge>();
 		for(int i=0; i<edgesData.length; i++){
-			edges.add(getEdgeFromLine(edgesData[i]));
+			Edge edge=getEdgeFromLine(edgesData[i]);
+			if(edge!=null)
+				edges.add(getEdgeFromLine(edgesData[i]));
 		}
 		return new Tree(edges);
     }
@@ -75,10 +79,6 @@ public class ClusterParser {
             return "";
         }
     }
-
-
-
-
 }
 
 

@@ -36,7 +36,7 @@ public class MultipleTreesReadTest {
 	@Test
 	public void displayTrees(){
 		for(int i=0; i<2; i++){
-			System.out.println("Tree number "+i+"\n");
+			System.out.println("Tree number "+i);
 			System.out.println(trees.get(i).getTreeVisualisation());
 			System.out.println("======================");
 		}
