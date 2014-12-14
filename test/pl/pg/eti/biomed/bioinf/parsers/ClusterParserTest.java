@@ -13,7 +13,7 @@ public class ClusterParserTest {
 	
 	@Before
 	public void setup(){
-		tree = ClusterParser.parseFile("testData1.txt");
+		tree = ClusterParser.getOneTreeFromFile("testData1.txt");
 	}
 	
 	@Test

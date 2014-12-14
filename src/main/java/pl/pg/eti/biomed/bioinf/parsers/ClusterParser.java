@@ -14,7 +14,7 @@ import java.nio.file.Files;
 public class ClusterParser {
 
 
-    public static Tree parseFile(String filePath) {
+    public static Tree getOneTreeFromFile(String filePath) {
     	Tree tree = getTreesFromFile(filePath, "##").get(0);
     	return tree;
     }
@@ -29,7 +29,6 @@ public class ClusterParser {
     }
     
     private static Edge getEdgeFromLine(String line){
-    	System.out.println("Line = "+line);
     	ArrayList<Leaf> leaves = new ArrayList<Leaf>();
         String[] leavesNames = line.split(",");
         for(int i=0;i<leavesNames.length; i++){

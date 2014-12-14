@@ -19,7 +19,7 @@ public class ParseNewick {
 
         public static void main(String [] args) throws Exception {
 
-            Tree tree = ClusterParser.parseFile("D:\\workspace\\Bioinformatics\\cos.txt");
+            Tree tree = ClusterParser.getOneTreeFromFile("D:\\workspace\\Bioinformatics\\cos.txt");
             
         } // end of main
 
