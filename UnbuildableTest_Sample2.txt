@@ -1,4 +1,0 @@
-Kot, Mysz
-Mysz, Dinozaur
-Dinozaur, Kot, Mysz, Lew
-Lew, Kot

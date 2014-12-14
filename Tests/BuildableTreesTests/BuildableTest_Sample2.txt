@@ -1,0 +1,4 @@
+Lew,Tygrys,Kot
+Kot,Tygrys
+Puma,Lampart
+Puma,Lampart,Kot,Tygrys,Lew
