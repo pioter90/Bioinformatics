@@ -31,8 +31,9 @@ public class Tree {
 		if(isTreeLegit){
 			String output="";
 			for(Edge e:edges){
-				output+=e.getLeavesAsString();
+				output+=e.getLeavesAsString()+"\n";
 			}
+			output=output.substring(0, output.length()-1);
 			return output;
 		}else{
 			return "Drzewo o zadanych parametrach nie istnieje";

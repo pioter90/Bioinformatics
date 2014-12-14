@@ -39,4 +39,9 @@ public class ClusterParserTest {
 		Assert.assertEquals(leaves.get(0).getId(), "D");
 		Assert.assertEquals(leaves.get(1).getId(), "E");
 	}
+	
+	@Test
+	public void visualizeTree(){
+		System.out.println(tree.getTreeVisualisation());
+	}
 }
