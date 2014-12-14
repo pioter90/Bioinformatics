@@ -18,14 +18,14 @@ public class ClusterParserTest {
 	
 	@Test
 	public void checkNumberOfNodes(){
-		Assert.assertTrue(tree.getNumberOfEdges()==2);
+		Assert.assertEquals(2,tree.getNumberOfEdges());
 	}
 	
 	@Test
 	public void checkFirstNode(){
 		Edge first = tree.getEdgeAt(0);
 		ArrayList<Leaf> leaves = first.getLeaves();
-		Assert.assertTrue(leaves.size()==3);
+		Assert.assertEquals(3,leaves.size());
 		Assert.assertEquals("A", leaves.get(0).getId());
 		Assert.assertEquals("B", leaves.get(1).getId());
 		Assert.assertEquals("C", leaves.get(2).getId());
