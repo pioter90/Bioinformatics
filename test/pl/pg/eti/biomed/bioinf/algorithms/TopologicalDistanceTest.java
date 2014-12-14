@@ -1,8 +1,10 @@
 package pl.pg.eti.biomed.bioinf.algorithms;
-import pl.pg.eti.biomed.algorithms.TopologicDistance;
+
 
 
 import org.junit.*;
+
+import pl.pg.eti.biomed.bioinf.algorithms.TopologicDistance;
 import pl.pg.eti.biomed.bioinf.dao.Tree;
 import pl.pg.eti.biomed.bioinf.parsers.ClusterParser;
 

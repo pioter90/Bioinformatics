@@ -1,4 +1,4 @@
-package pl.pg.eti.biomed.algorithms;
+package pl.pg.eti.biomed.bioinf.algorithms;
 
 import pl.pg.eti.biomed.bioinf.dao.Edge;
 import pl.pg.eti.biomed.bioinf.dao.Tree;
