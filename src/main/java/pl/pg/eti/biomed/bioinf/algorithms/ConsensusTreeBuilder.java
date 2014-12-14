@@ -9,10 +9,12 @@ public class ConsensusTreeBuilder {
 	public static Tree getConsensusTree(ArrayList<Tree> trees, int percentage){
 		if(haveAllTheTreesCommonRoot(trees)){
 			ArrayList<Edge> consensusEdges = new ArrayList<Edge>();
-			//TO DO
-			
-			
-			
+			for(Tree tree:trees){
+				for(Edge edge:tree.getEdges()){
+					if(canEdgeBeAddedToConsensusTree(edge, trees, percentage) && !consensusEdges.contains(edge))
+						consensusEdges.add(edge);
+				}
+			}
 			return new Tree(consensusEdges);
 		}else{
 			return null;
