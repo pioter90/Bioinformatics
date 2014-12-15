@@ -36,7 +36,7 @@ public class ConsensusTreeBuilder {
 			if(tree.doesTreeContainsEdge(edge))
 				numberOfOccurences++;
 		}
-		if(numberOfOccurences/trees.size()>=(double)(percentage/100))
+		if(1.0*numberOfOccurences/trees.size()>=(1.0*percentage/100))
 			return true;
 		else
 			return false;
