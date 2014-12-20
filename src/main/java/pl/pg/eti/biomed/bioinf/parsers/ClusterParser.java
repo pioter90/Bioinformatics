@@ -3,16 +3,9 @@ import pl.pg.eti.biomed.bioinf.dao.Edge;
 import pl.pg.eti.biomed.bioinf.dao.Leaf;
 import pl.pg.eti.biomed.bioinf.dao.Tree;
 
-import java.io.*;
-import java.nio.file.Path;
-import java.nio.charset.Charset;
-import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.List;
-import java.nio.file.Files;
 
 public class ClusterParser {
-
 
     public static Tree getOneTreeFromFile(String filePath) {
     	Tree tree = getTreesFromFile(filePath, "##").get(0);
@@ -20,7 +13,7 @@ public class ClusterParser {
     }
     
     public static ArrayList<Tree> getTreesFromFile(String filePath, String separator){
-    	String fileData = readFileAsString(filePath);
+    	String fileData = FileParser.readFileAsString(filePath);
     	if(fileData.length()!=0){
     		ArrayList<Tree> trees = getTreesFromString(fileData, separator);
     		return trees;
@@ -58,26 +51,6 @@ public class ClusterParser {
     		trees.add(getTreeFromString(treesData[i]));
     	}
     	return trees;
-    }
-    
-    private static String readFileAsString(String filePath){
-    	try {
-            File file = new File(filePath);
-            FileReader fileReader = new FileReader(file);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            String line;
-            String readFile="";
-            while ((line = bufferedReader.readLine()) != null) {
-                line = line.replaceAll("\\s+","");
-                readFile+=line+"\n";
-            }
-            readFile = readFile.substring(0, readFile.length()-1);
-            fileReader.close();
-            return readFile;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return "";
-        }
     }
 }
 
