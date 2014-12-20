@@ -6,12 +6,12 @@ import pl.pg.eti.biomed.bioinf.dao.Edge;
 import pl.pg.eti.biomed.bioinf.dao.Tree;
 
 public class ExtendedTree {
-	public Tree calculateExtendedTree(ArrayList<Tree> trees){
+	public static Tree calculateExtendedTree(ArrayList<Tree> trees){
 		Tree extendedTree = new Tree(getAllEdgesFromTrees(trees));
 		return extendedTree;
 	}
 	
-	private ArrayList<Edge> getAllEdgesFromTrees(ArrayList<Tree> trees){
+	private static ArrayList<Edge> getAllEdgesFromTrees(ArrayList<Tree> trees){
 		ArrayList<Edge> existingEdges = new ArrayList<Edge>();
 		for(Tree tree:trees){
 			for(Edge edge:tree.getEdges()){
