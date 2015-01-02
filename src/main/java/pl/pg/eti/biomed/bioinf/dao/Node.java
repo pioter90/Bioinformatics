@@ -14,6 +14,7 @@ public class Node {
 	}
 	
 	public void addChild(Node child){
+		//Dodaæ liœcie dziecka
 		children.add(child);
 	}
 	

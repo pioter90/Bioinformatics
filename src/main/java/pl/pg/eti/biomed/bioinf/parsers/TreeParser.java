@@ -33,27 +33,19 @@ public class TreeParser {
 			if(c=='[' || c==']' || c=='(' || c==')' || c==','){
 				switch(c){
 				case '[':
-					currentNode = new Node(root);
-					root.addChild(currentNode);
-					break;
-				case ']':
-					//currentNode = currentNode.getParent();
+					currentNode = root;
 					break;
 				case '(':
-					currentNode.addLeaf(new Leaf(leafName));
-					Node newParent = currentNode;
 					currentNode = new Node(currentNode);
-					newParent.addChild(currentNode);
+					currentNode.getParent().addChild(currentNode);
+					break;
 				case ')':
 					if(!leafName.equals(""))
-						currentNode.addLeaf(new Leaf(leafName));				
+						currentNode.addLeaf(new Leaf(leafName));
 					currentNode = currentNode.getParent();
 					break;
 				case ',':
 					currentNode.addLeaf(new Leaf(leafName));
-					Node parent = currentNode.getParent();
-					parent.addChild(currentNode);
-					currentNode = new Node(parent);
 					break;
 				}
 				leafName="";
