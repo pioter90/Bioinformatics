@@ -12,6 +12,11 @@ public class Leaf {
 	}
 	
 	@Override
+	public String toString(){
+		return this.id;
+	}
+	
+	@Override
 	public boolean equals(Object o){
 		if(o.getClass().equals(this.getClass())){
 			Leaf l = (Leaf)o;

@@ -29,9 +29,10 @@ public class TreeParser {
 		Node root = new Node(null);
 		for(int i=0; i<line.length(); i++){
 			char c = line.charAt(i);
-			System.out.print(c);
 			if(c=='[' || c==']' || c=='(' || c==')' || c==','){
 				switch(c){
+				case ']':
+					break;
 				case '[':
 					currentNode = root;
 					break;
