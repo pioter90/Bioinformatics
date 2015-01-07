@@ -6,6 +6,7 @@ public class Node {
 	private Node parent;
 	private ArrayList<Node> children;
 	private ArrayList<Leaf> leaves;
+	private boolean checked;
 	
 	public Node(Node parent){
 		this.parent = parent;
@@ -14,7 +15,6 @@ public class Node {
 	}
 	
 	public void addChild(Node child){
-		//Dodaæ liœcie dziecka
 		children.add(child);
 	}
 	
@@ -32,5 +32,25 @@ public class Node {
 	
 	public void addLeaf(Leaf leaf){
 		leaves.add(leaf);
+	}
+	
+	public boolean check(){
+		if(checked)
+			return false;
+		else{
+			checked=true;
+			return true;
+		}	
+	}
+	
+	public void updateLeaves(){
+		for(Node child:this.children){
+			child.updateLeaves();
+			ArrayList<Leaf> childLeaves = child.getLeaves();
+			for(Leaf leaf:childLeaves){
+				this.addLeaf(leaf);
+			}
+		}
+
 	}
 }
