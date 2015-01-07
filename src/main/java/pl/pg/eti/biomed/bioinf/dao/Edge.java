@@ -1,12 +1,16 @@
 package pl.pg.eti.biomed.bioinf.dao;
 
 import java.util.ArrayList;
+import java.util.Collections;
+
+import pl.pg.eti.biomed.bioinf.comparators.LeafComparer;
 
 public class Edge {
 	private ArrayList<Leaf> leaves;
 	
 	public Edge(ArrayList<Leaf> leaves){
 		this.leaves = leaves;
+		Collections.sort(leaves, new LeafComparer());
 	}
 	
 	/*
