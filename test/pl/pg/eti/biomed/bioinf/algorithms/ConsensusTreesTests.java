@@ -68,7 +68,7 @@ public class ConsensusTreesTests {
 
     }
     
-    @Ignore//incorrect test result assumption - it is not said that first singleton will be A, and not B...
+    
     @Test
     public void checkThirdNodeMajorConsensus(){
         Edge third = firstConsensusTreeMajorConsensus.getEdgeAt(2);
