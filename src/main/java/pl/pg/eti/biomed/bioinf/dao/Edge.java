@@ -13,6 +13,12 @@ public class Edge {
 		Collections.sort(leaves, new LeafComparer());
 	}
 	
+	//For Singletons
+	public Edge(Leaf leaf){
+		leaves = new ArrayList<Leaf>();
+		leaves.add(leaf);
+	}
+	
 	/*
 	 * Return true/false whether the edges (clusters) are consistence
 	 */

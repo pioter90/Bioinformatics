@@ -18,7 +18,7 @@ public class ClusterParserTest {
 	
 	@Test
 	public void checkNumberOfNodes(){
-		Assert.assertEquals(2,tree.getNumberOfEdges());
+		Assert.assertEquals(7,tree.getNumberOfEdges());
 	}
 	
 	@Test

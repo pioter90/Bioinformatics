@@ -25,7 +25,7 @@ public class TreeParserTest {
 	@Test
 	public void testClustersFromTree1(){
 		Tree firstTree = trees.get(0);
-		Assert.assertEquals("Liczba klastrów dla drzewa 1 siê nie zgadza!", 7, firstTree.getNumberOfEdges());
+		Assert.assertEquals("Liczba klastrów dla drzewa 1 siê nie zgadza!", 15, firstTree.getNumberOfEdges());
 		Assert.assertEquals("Nieoczekiwany zbiór liœci w roocie","ABCDEFGH",firstTree.getEdgeAt(0).getLeavesAsString());
 		ArrayList<String> edgesAsString = new ArrayList<String>();
 		for(int i=0;i<firstTree.getNumberOfEdges(); i++)
@@ -41,7 +41,7 @@ public class TreeParserTest {
 	@Test
 	public void testClustersFromTree2(){
 		Tree secondTree = trees.get(1);
-		Assert.assertEquals("Liczba klastrów dla drzewa 2 siê nie zgadza!", 6, secondTree.getNumberOfEdges());
+		Assert.assertEquals("Liczba klastrów dla drzewa 2 siê nie zgadza!", 13, secondTree.getNumberOfEdges());
 		Assert.assertEquals("Nieoczekiwany zbiór liœci w roocie","ABCDEFG",secondTree.getEdgeAt(0).getLeavesAsString());
 		ArrayList<String> edgesAsString = new ArrayList<String>();
 		for(int i=0;i<secondTree.getNumberOfEdges(); i++)
@@ -56,7 +56,7 @@ public class TreeParserTest {
 	@Test
 	public void testClustersFromTree3(){
 		Tree thirdTree = trees.get(2);
-		Assert.assertEquals("Liczba klastrów dla drzewa 3 siê nie zgadza!", 10, thirdTree.getNumberOfEdges());
+		Assert.assertEquals("Liczba klastrów dla drzewa 3 siê nie zgadza!", 22, thirdTree.getNumberOfEdges());
 		Assert.assertEquals("Nieoczekiwany zbiór liœci w roocie","ABCDEFGHIJKL",thirdTree.getEdgeAt(0).getLeavesAsString());
 		ArrayList<String> edgesAsString = new ArrayList<String>();
 		for(int i=0;i<thirdTree.getNumberOfEdges(); i++)

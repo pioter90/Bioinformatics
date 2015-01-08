@@ -11,8 +11,22 @@ public class Tree {
 	public Tree(ArrayList<Edge> edges){
 		this.edges = edges;
 		EdgeComparator comparator = new EdgeComparator();
+		addSingletons();
 		Collections.sort(edges, comparator);
 		isTreeLegit=isTheTreeBuildable();
+	}
+	
+	private void addSingletons(){
+		ArrayList<Leaf> leaves = new ArrayList<Leaf>();
+		for(Edge edge:edges)
+			for(Leaf leaf:edge.getLeaves())
+				if(!leaves.contains(leaf))
+					leaves.add(leaf);
+		for(Leaf leaf:leaves){
+			Edge edge = new Edge(leaf);
+			if(!edges.contains(edge))
+				edges.add(edge);
+		}
 	}
 	
 	public int getNumberOfEdges(){
