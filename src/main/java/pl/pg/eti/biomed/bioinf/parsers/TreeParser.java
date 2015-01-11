@@ -83,6 +83,8 @@ public class TreeParser {
 				leafName += c;
 			}
 		}
+		if(!leafName.equals(""))
+			currentNode.addLeaf(new Leaf(leafName));
 		return root;
 	}
 }
