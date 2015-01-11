@@ -23,9 +23,11 @@ public class TreeCutter {
 		return new Tree(newEdges);
 	}
 	
-//	public static Tree cutLeaves(ArrayList<Leaf> leaves, Tree tree){
-//		for(Leaf leaf:leaves){
-//			
-//		}
-//	}
+	public static Tree cutLeaves(ArrayList<Leaf> leaves, Tree tree){
+		Tree cuttedTree = new Tree(tree.getEdges());
+		for(Leaf leaf:leaves){
+			cuttedTree = cutLeaf(leaf, cuttedTree);
+		}
+		return cuttedTree;
+	}
 }
